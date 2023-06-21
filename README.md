@@ -10,7 +10,7 @@
 
 ## Resources
 
-- [ExchangeRate-API](https://www.exchangerate-api.com/docs/free). Currency rate source. [`https://open.er-api.com/v6/latest/USD`](https://open.er-api.com/v6/latest/USD)
+- [`https://open.er-api.com/v6/latest/USD`](https://open.er-api.com/v6/latest/USD). API
 - [currency-flags](https://www.npmjs.com/package/currency-flags). Flag image source.
 - [Select-list](https://select2.org/). Select list library
 
