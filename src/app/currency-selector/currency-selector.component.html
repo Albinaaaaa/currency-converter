@@ -1,0 +1,8 @@
+<ng-select class="custom" #from name="" id="from" (ngModelChange)="changeBase($event)" [(ngModel)]="currencyFrom">
+	<ng-option class="custom" *ngFor="let curr of currencies | keyvalue" [value]="curr.key">
+		<div class="custom">
+			<div class="currency-flag currency-flag-{{curr.key.toLowerCase()}}"></div>
+			<div>{{curr.key}}</div>
+		</div>
+	</ng-option>
+</ng-select>
