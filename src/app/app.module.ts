@@ -7,12 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
-import { CurrencySelectorComponent } from './currency-selector/currency-selector.component';
+import { HeaderComponent } from './header/header.component';
+// import { CurrencySelectorComponent } from './currency-selector/currency-selector.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CurrencySelectorComponent,
+    HeaderComponent,
+    // CurrencySelectorComponent,
   ],
   imports: [
     BrowserModule,

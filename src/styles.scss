@@ -1,9 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@ng-select/ng-select/themes/default.theme.css";
 body {
-
+	margin: 0;
 	background: #161c53;
 	background: radial-gradient(circle, rgba(#3f2288, 0.8) 50%, rgba(#772288, 0.8) 86%);
 	color: #fff;
 	font-size: 20px;
+}
+
+.app {
+	display: block;
+	height: 85vh;
 }
