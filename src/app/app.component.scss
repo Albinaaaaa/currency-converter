@@ -6,10 +6,12 @@
 	width: 48px;
 	scale: 60%;
 	outline: 1.5px solid #eaeaea;
+	cursor: pointer;
 }
 
 .ng-select.custom {
 	max-width: 150px;
+	cursor: pointer;
 }
 
 .custom {
@@ -19,4 +21,114 @@
 
 .ng-select ::ng-deep .ng-clear-wrapper {
 	display: none;
+}
+
+.main {
+	margin: 0 auto;
+	width: 1250px;
+
+	&__card {
+		
+	}
+	
+
+		.card {
+			padding: 50px 100px;
+				background-color: rgba(256, 256, 256, 0.3);
+				box-shadow: 0px 0px 15px 3px rgba(256, 256, 256, 0.3), inset 0px 0px 30px 25px rgba(256, 256, 256, 0.2);
+				border-radius: 50px;
+				// filter: blur(5px);
+	
+			&__items {
+				display: flex;
+				align-items: center;
+					justify-content: space-between;
+
+				&-amount {
+					display: flex;
+					flex-direction: column;
+				}
+			}
+	
+			&__input {
+				padding: 15px;
+				border-radius: 25px;
+				border: none;
+				
+				&:focus {
+					outline: 2px solid #3b94f9;
+				}
+
+				&:invalid {
+					outline: 2px solid #c20808;
+				}
+			}
+	
+			&__select-items {}
+	
+			.select-items {
+				display: flex;
+				align-items: center;
+				gap: 25px;
+	
+				&__select {
+					display: flex;
+					flex-direction: column;
+					column-gap: 10px;
+	
+					&-from {}
+	
+					&-to {}
+				}
+	
+			}
+	
+			&__label {
+				margin-bottom: 10px;
+			}
+	
+			&__button-switch {
+				padding: 15px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: rgba(256, 256, 256, 0.3);
+				border: 1px solid transparent;
+				cursor: pointer;
+				border-radius: 50%;
+				transition: border 0.3s ease;
+				
+				&:hover, &:focus {
+					border: 1px solid rgba(256, 256, 256, 1);
+					box-shadow: 0px 0px 15px 3px rgba(256, 256, 256, 0.3), inset 0px 0px 30px 25px rgba(256, 256, 256, 0.2);
+				}
+			}
+	
+			&__result {}
+	
+			&__button-convert {
+				padding: 15px;
+				color: #ffffff;
+				font-size: 20px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background-color: #3b94f9;
+					border: 1px solid transparent;
+					cursor: pointer;
+					border-radius: 25px;
+					transition: border 0.3s ease;
+				
+					&:hover,
+					&:focus {
+						border: 1px solid rgba(256, 256, 256, 1);
+						box-shadow: 0px 0px 15px 3px rgba(256, 256, 256, 0.3), inset 0px 0px 30px 25px rgba(256, 256, 256, 0.2);
+					}
+			}
+
+			&__time {
+				text-align: right;
+				font-size: 16px;			
+			}
+		}
 }

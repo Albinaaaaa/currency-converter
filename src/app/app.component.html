@@ -2,16 +2,16 @@
 <main class="main">
   <section class="main__card card">
     <div class="card__items">
-      <div class="card__item-amount">
-        <label for="amount">Amount</label>
+      <div class="card__items-amount">
+        <label class="card__label" for="amount">Amount</label>
         <input class="card__input" id="amount" type="number" required [(ngModel)]="amountValue" placeholder="Amount"
-          step="0.02">
+          step="0.02" min="0">
       </div>
       
 
       <div class="card__select-items select-items">
         <div class="select-items__select select-items__select-from">
-          <label for="from">From</label>
+          <label class="card__label" for="from">From</label>
             <ng-select class="custom" #from name="" id="from" (ngModelChange)="changeBase($event)" [(ngModel)]="currencyFrom">
               <ng-option class="custom" *ngFor="let curr of currencies | keyvalue" [value]="curr.key">
                 <div class="custom">
@@ -22,12 +22,23 @@
             </ng-select>
         </div>
 
-      <a (click)="switchCurrencies()">
-        <img src="../images/icons/exchange-icon.svg" alt="Exchange currency">
-      </a>
+      <div (click)="switchCurrencies()" class="card__button-switch">
+        <svg fill="#ffffff" height="24px" width="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 423.755 423.755" xml:space="preserve">
+          <g>
+            <path d="M43.84,281.457c-18.585-44.869-18.586-94.29,0-139.159c10.649-25.709,26.678-48.152,46.86-66.135l60.86,60.86V15.099
+        		H29.635l39.88,39.88c-64.293,58.426-88.5,153.2-53.391,237.959c14.167,34.202,37.07,64.159,66.234,86.634
+        		c28.275,21.789,61.873,36.201,97.162,41.677l4.601-29.646C120.778,381.774,68.337,340.597,43.84,281.457z" />
+            <path d="M407.516,292.938c21.652-52.272,21.652-109.848,0-162.12c-14.167-34.202-37.071-64.159-66.234-86.633
+        		C313.007,22.395,279.409,7.983,244.12,2.507l-4.601,29.646c63.342,9.829,115.783,51.005,140.28,110.146
+        		c18.586,44.869,18.586,94.29,0,139.159c-10.649,25.709-26.678,48.152-46.859,66.135l-60.86-60.86v121.924h121.924l-39.801-39.801
+        		C377.118,348.099,395.334,322.348,407.516,292.938z" />
+          </g>
+        </svg>
+      </div>
       
       <div class="select-items__select select-items__select-to">
-        <label for="to">To</label>
+        <label class="card__label" for="to">To</label>
           <ng-select class="custom" #to name="" id="to" (ngModelChange)="toCountry($event)" [(ngModel)]="currencyTo">
             <ng-option class="custom" *ngFor="let curr of currencies | keyvalue" [value]="curr.key">
               <div class="custom">
@@ -42,7 +53,8 @@
       <div class="card__result">
         {{amountValue}} {{currencyFrom}} = {{result}} {{currencyTo}}
       </div>
+    <button class="card__button-convert" (click)="convert(amountValue)">Convert</button>
     </div>
-    <button (click)="convert(amountValue)">Submit</button>
+    <p class="card__time">Last updated: {{lastUpdated}}</p>
   </section>
 </main>
